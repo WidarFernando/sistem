@@ -35,6 +35,8 @@ application/
 │   └── PenggajianModel.php      # Interaksi database & query builder
 └── views/
     └── admin/
+
+![TAMPILAN DASHBOARD](https://github.com/WidarFernando/sistem/blob/2590ce4222a8ce0b151573212135215ece5eff1a/assets/img/hal1.png)
         ├── barangMasuk.php      # View tabel utama & script debugging
         ├── formTambahBarang.php # Form pendaftaran barang masuk
         └── formUpdateBarang.php # Form pembaruan data barang
