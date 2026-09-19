@@ -1,71 +1,40 @@
-###################
-What is CodeIgniter
-###################
+# 📦 Desi Collection - Sistem Informasi Manajemen Inventori
 
-CodeIgniter is an Application Development Framework - a toolkit - for people
-who build web sites using PHP. Its goal is to enable you to develop projects
-much faster than you could if you were writing code from scratch, by providing
-a rich set of libraries for commonly needed tasks, as well as a simple
-interface and logical structure to access these libraries. CodeIgniter lets
-you creatively focus on your project by minimizing the amount of code needed
-for a given task.
+Sistem Informasi Manajemen Inventori **Desi Collection** berbasis web yang dibangun menggunakan **CodeIgniter 3**, **PHP**, **MySQL**, dan **SB Admin 2 (Bootstrap 4)**. Aplikasi ini dirancang untuk mengelola pencatatan transaksi barang masuk, barang keluar, filtering data, serta integrasi logging/debugging.
 
-*******************
-Release Information
-*******************
+---
 
-This repo contains in-development code for future releases. To download the
-latest stable release please visit the `CodeIgniter Downloads
-<https://codeigniter.com/download>`_ page.
+## 🚀 Fitur Utama
 
-**************************
-Changelog and New Features
-**************************
+- **Manajemen Barang Masuk (CRUD):** Tambah, lihat, ubah, dan hapus data transaksi barang masuk.
+- **Pencarian & Filtering:** Pencarian data barang secara dinamis berdasarkan kata kunci (*server-side GET query*).
+- **Sanitasi Data & Keamanan:** Penggunaan `html_escape()` untuk mencegah serangan *Cross-Site Scripting (XSS)* serta enkapsulasi validasi form.
+- **Debugging & Error Handling:** 
+  - Server-side log menggunakan PHP Console log.
+  - Client-side error tracking dengan penanganan pengecualian (*try-catch block*) pada JavaScript.
+- **Antarmuka Responsif:** Menggunakan *template* SB Admin 2 berbasis Bootstrap 4.
 
-You can find a list of all changes for each release in the `user
-guide change log <https://github.com/bcit-ci/CodeIgniter/blob/develop/user_guide_src/source/changelog.rst>`_.
+---
 
-*******************
-Server Requirements
-*******************
+## 🛠️ Teknologi & Pustaka
 
-PHP version 5.6 or newer is recommended.
+* **Backend:** PHP (v7.4+ / v8.x) & Framework CodeIgniter 3
+* **Database:** MySQL / MariaDB
+* **Frontend:** HTML5, CSS3, JavaScript (ES6), jQuery, Bootstrap 4, FontAwesome 5
+* **Version Control:** Git & GitHub
 
-It should work on 5.3.7 as well, but we strongly advise you NOT to run
-such old versions of PHP, because of potential security and performance
-issues, as well as missing features.
+---
 
-************
-Installation
-************
+## 📂 Struktur Modul Utamanya
 
-Please see the `installation section <https://codeigniter.com/userguide3/installation/index.html>`_
-of the CodeIgniter User Guide.
-
-*******
-License
-*******
-
-Please see the `license
-agreement <https://github.com/bcit-ci/CodeIgniter/blob/develop/user_guide_src/source/license.rst>`_.
-
-*********
-Resources
-*********
-
--  `User Guide <https://codeigniter.com/docs>`_
--  `Contributing Guide <https://github.com/bcit-ci/CodeIgniter/blob/develop/contributing.md>`_
--  `Language File Translations <https://github.com/bcit-ci/codeigniter3-translations>`_
--  `Community Forums <http://forum.codeigniter.com/>`_
--  `Community Wiki <https://github.com/bcit-ci/CodeIgniter/wiki>`_
--  `Community Slack Channel <https://codeigniterchat.slack.com>`_
-
-Report security issues to our `Security Panel <mailto:security@codeigniter.com>`_
-or via our `page on HackerOne <https://hackerone.com/codeigniter>`_, thank you.
-
-***************
-Acknowledgement
-***************
-
-The CodeIgniter team would like to thank EllisLab, all the
-contributors to the CodeIgniter project and you, the CodeIgniter user.
+```text
+application/
+├── controllers/
+│   └── BarangMasuk.php          # Logika bisnis & aturan validasi form
+├── models/
+│   └── PenggajianModel.php      # Interaksi database & query builder
+└── views/
+    └── admin/
+        ├── barangMasuk.php      # View tabel utama & script debugging
+        ├── formTambahBarang.php # Form pendaftaran barang masuk
+        └── formUpdateBarang.php # Form pembaruan data barang
