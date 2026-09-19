@@ -40,3 +40,4 @@ application/
         └── formUpdateBarang.php # Form pembaruan data barang
 
 ![TAMPILAN DASHBOARD](https://github.com/WidarFernando/sistem/blob/2590ce4222a8ce0b151573212135215ece5eff1a/assets/img/hal1.png)
+![Tampilan Barang Masuk](assets/img/hal2.png)
